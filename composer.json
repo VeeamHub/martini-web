@@ -1,0 +1,26 @@
+{
+  "name": "veeam/project-martini",
+  "description": "Project Martini",
+  "authors": [
+        {
+            "name": "Niels Engelen",
+            "email": "niels.engelen@veeam.com"
+        },
+		{
+            "name": "Timothy Dewin",
+            "email": "timothy.dewin@veeam.com"
+        }
+    ],
+  "autoload": {
+    "psr-4": {
+	  "Terraform\\": "core/"
+    }
+  },
+  "require": {
+    "aws/aws-sdk-php": "~3",
+	"components/jquery": "3.2",
+	"twbs/bootstrap": "3.3.7",
+    "symfony/process": "^4.2",
+    "fostam/getopts": "^1.1"
+  }
+}
