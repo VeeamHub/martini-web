@@ -775,6 +775,10 @@ $(document).on("click", ".restore-different", function(e) {
 					  "changedItems": "true", \
 					  "deletedItems": "true", \
 					  "markRestoredAsUnread": "true", \
+					  "excludeDrafts": "false", \
+					  "excludeDeletedItems": "false", \
+					  "excludeInPlaceHoldItems": "true", \
+					  "excludeLitigationHoldItems": "true", \
 					  "items": [ \
 						' + ids + ' \
 					\ ] \
@@ -795,7 +799,11 @@ $(document).on("click", ".restore-different", function(e) {
 					  "userPassword": "' + pass + '", \
 					  "changedItems": "true", \
 					  "deletedItems": "true", \
-					  "markRestoredAsUnread": "true" \
+					  "markRestoredAsUnread": "true", \
+					  "excludeDrafts": "false", \
+					  "excludeDeletedItems": "false", \
+					  "excludeInPlaceHoldItems": "true", \
+					  "excludeLitigationHoldItems": "true" \
 					} \
 				}';
 			}

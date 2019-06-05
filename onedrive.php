@@ -572,7 +572,7 @@ $(document).on("click", ".download-file", function(e) {
     var itemname = $(this).data("itemname");
     var userid = $(this).data("userid");
     var rid = "<?php echo $rid; ?>";
-	var json = '{ "save" : null }';
+	var json = '{ "save" : { "asZip" : "false" } }';
 
 	$.get("core/veeam.php", {"action" : "exportonedriveitem", "itemid" : itemid, "userid" : userid, "rid" : rid, "json" : json, "type" : filetype}).done(function(data) {
 		e.preventDefault();
