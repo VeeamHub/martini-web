@@ -99,7 +99,7 @@ if (empty($_SESSION['portaltoken'])) {
 ?>
 <nav class="navbar navbar-default navbar-static-top">
 	<ul class="nav navbar-header">
-	  <li><a class="navbar-brand navbar-logo" href="/"><img src="images/logo.svg" alt="Veeam Backup for Microsoft Office 365" class="logo" /></a></li>
+	  <li><a class="navbar-brand navbar-logo" href="/"><img src="images/logo.png" class="logo" /></a></li>
 	</ul>
 	<?php
 	if (isset($_SESSION['connected'])) {
