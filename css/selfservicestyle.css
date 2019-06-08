@@ -111,8 +111,8 @@ a.navbar-logo:hover {
   text-decoration: none;
 }
 img.logo {
-  height: 100%;
-  width: auto;
+  height: 35px;
+  width: 180px;
 }
 a.navbar-right: {
   margin-right: 10px;
