@@ -16,10 +16,10 @@ It allows the following features:
 - Linux VM (Ubuntu/Debian are fully tested and supported)
 
 ## Installation
-
+Project Martini can be installed by leveraging the CLI as explained in [The installation blog](http://blog.dewin.me/2019/06/installing-project-martini.html)
 
 ## Configuration
-
+Follow the setup via the CLI.
 
 ## Usage
 Open a webbrowser and go to index.php. From here you can either login as an admin or a tenant.
