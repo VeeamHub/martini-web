@@ -20,7 +20,7 @@ function getPassword($keyref) {
 	$mysqlsalt = "cocktailsarefun$keyref$hn";
 	
 	try {
-		$stmt = $db->prepare("select DECODE(encryptedpassword, ?) as pw from martini_securestore where keyval = ?");
+		$stmt = $db->prepare("select AES_ENCRYPT(encryptedpassword,UNHEX(SHA2(?,512))) as pw from martini_securestore where keyval = ?");
 		$stmt->execute(array($mysqlsalt, $keyref));
 		$result = $stmt->fetchAll();
 
@@ -41,7 +41,7 @@ function savePassword($keyref, $pw) {
 	$mysqlsalt = "cocktailsarefun$keyref$hn";
 	
 	try {
-		$sql = "insert into martini_securestore(keyval, encryptedpassword) values (?,ENCODE(?,?))";
+		$sql = "insert into martini_securestore(keyval, encryptedpassword) values (?,AES_ENCRYPT(?,UNHEX(SHA2(?,512))))";
 		$stmt = $db->prepare($sql);
 		$stmt->execute(array($keyref, $hashpw, $mysqlsalt));
 	} catch(PDOException $ex) {
