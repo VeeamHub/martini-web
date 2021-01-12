@@ -32,7 +32,7 @@ class VBO {
   public function __construct($host, $port) {
     try {
         $this->client = new Client([
-            'base_uri' => 'https://'.$host.':'.$port.'/v3/',
+            'base_uri' => 'https://'.$host.':'.$port.'/v5/',
             'connect_timeout' => 30,
             'http_errors' => false
         ]);
